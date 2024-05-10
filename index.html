@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viet Duc | Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awesome/6.5.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "infinite-scroll": "infinite-scroll 25s linear infinite",
+            },
+            keyframes: {
+              "infinite-scroll": {
+                from: { transform: "translateX(0)" },
+                to: { transform: "translateX(-100%)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/z5424759995220_90b3cf4dfd8fa5e477f163fa4781e83c.jpg"
+              alt="Viet Duc"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Viet Duc">Đỗ Việt Đức</h1>
+
+            <p class="title">Front-end Web developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:vietducdo00@gmail.com" class="contact-link"
+                  >vietducdo00@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+84386660383" class="contact-link">038 666 0383</a>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">May 22, 2000</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>Hà Nội, Việt Nam</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Project</button>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Blog</button>
+            </li> -->
+
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #ABOUT
+      -->
+
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
+
+          <section class="about-text">
+            <p>
+              I'm a Fresher Front End Developer, passionate about crafting
+              outstanding web experiences and powerful interactions. Although I
+              have just embarked on my career in this field, I have already
+              accumulated the necessary knowledge and skills to build remarkable
+              and cross-device compatible user interfaces through my learning
+              and work experiences. My curiosity and eagerness to learn are
+              boundless, and I am always ready to further enhance my abilities
+              in this field.
+            </p>
+
+            <p>
+              I am seeking opportunities to apply and develop my skills in a
+              real-world environment, where I can contribute to building
+              noteworthy and exciting web applications.
+              <br />
+              <br />
+              Thank you for taking the time to read my introduction. I look
+              forward to the opportunity to work together and contribute to the
+              team's projects.
+            </p>
+          </section>
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">Education</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    COMPUTER ENGINEERING TECHNOLOGY
+                  </h4>
+
+                  <p class="service-item-text">
+                    HANOI UNIVERSITY OF INDUSTRY | 2018 - 2024
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="service">
+            <h3 class="h3 service-title">CERTIFICATES</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-certificate"></i>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">
+                    FPT Academy: Professional React Developer
+                  </h4>
+
+                  <p class="service-item-text"></p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <div class="modal-container" data-modal-container>
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="Daniel lewis"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+
+                <img src="./assets/images/icon-quote.svg" alt="quote icon" />
+              </div>
+
+              <div class="modal-content"></div>
+            </section>
+          </div>
+
+          <!--
+          - tech-stack
+        -->
+
+          <section class="tech-stack">
+            <h3 class="h3 tech-stack-title">tech-stack</h3>
+
+            <!-- Logo Carousel animation -->
+            <div
+              x-data="{}"
+              x-init="$nextTick(() => {
+                let ul = $refs.logos;
+                ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                ul.nextSibling.setAttribute('aria-hidden', 'true');
+            })"
+              class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+            >
+              <ul
+                x-ref="logos"
+                class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll"
+              >
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/html.png"
+                    alt="html"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/CSS_logo_PNG3.png"
+                    alt="css"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/Git_logo_PNG2.png"
+                    alt="git"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/Sass_logo_PNG6.png"
+                    alt="sass"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/bootstrap-logo.png"
+                    alt="bootstrap"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/Tailwind CSS.png"
+                    alt="Tailwind"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/React-Logo.png"
+                    alt="react"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/png-transparent-typescript-original-logo-icon.png"
+                    alt="typescript"
+                  />
+                </li>
+                <li>
+                  <img
+                    class="tech-stack-logo"
+                    src="./assets/images/redux.png"
+                    alt="redux"
+                  />
+                </li>
+              </ul>
+            </div>
+            <!-- End: Logo Carousel animation -->
+          </section>
+        </article>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  HANOI UNIVERSITY OF INDUSTRY
+                </h4>
+
+                <span>2018 - 2024</span>
+
+                <p class="timeline-text">
+                  Study major: COMPUTER ENGINEERING TECHNOLOGY.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Technical intern</h4>
+
+                <span>2023</span>
+
+                <p class="timeline-text">Technical intern at ASMPT company.</p>
+              </li>
+            </ol>
+          </section>
+        </article>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio" data-page="project">
+          <header>
+            <h2 class="h2 article-title">Project</h2>
+          </header>
+
+          <section class="projects">
+            <!-- <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web design</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
+
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul> -->
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
+
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <div>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <a href="" target="_blank"
+                        ><i class="fa-regular fa-eye"></i
+                      ></a>
+                      <a
+                        href="https://github.com/VietDucDev/booking-react-app"
+                        target="_blank"
+                        ><i class="fa-solid fa-code"></i
+                      ></a>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-1.PNG"
+                      alt="finance"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">9ROOM</h3>
+
+                  <p class="project-category">Hotel booking website</p>
+                </div>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <div>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <a
+                        href="https://main--heroic-longma-b938bb.netlify.app/"
+                        target="_blank"
+                        ><i class="fa-regular fa-eye"></i
+                      ></a>
+                      <a
+                        href="https://github.com/VietDucDev/quiz-app"
+                        target="_blank"
+                        ><i class="fa-solid fa-code"></i
+                      ></a>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-2.PNG"
+                      alt="orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Quiz App</h3>
+
+                  <p class="project-category">
+                    Quiz web application to calculate scores
+                  </p>
+                </div>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <div>
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <a
+                        href="https://guileless-nougat-435ec6.netlify.app/"
+                        target="_blank"
+                        ><i class="fa-regular fa-eye"></i
+                      ></a>
+                      <a
+                        href="https://github.com/VietDucDev/Build-Stylish-Portfolio-Page-"
+                        target="_blank"
+                        ><i class="fa-solid fa-code"></i
+                      ></a>
+                    </div>
+
+                    <img
+                      src="./assets/images/project-3.PNG"
+                      alt="fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+
+                  <h3 class="project-title">Landing page portfolio</h3>
+
+                  <p class="project-category">Use html, css, js</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+
+        <!--
+        - #CONTACT
+      -->
+
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
+
+          <section class="mapbox" data-mapbox>
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59615.84403445415!2d105.7111282584522!3d20.95290660320193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134532bef4bcdb7%3A0xbcc7a679fcba07f6!2zSMOgIMSQw7RuZywgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1715327838195!5m2!1svi!2s"
+                width="800"
+                height="600"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </figure>
+          </section>
+
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
+
+            <form action="#" class="form" data-form>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
+
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
+
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

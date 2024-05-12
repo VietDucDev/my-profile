@@ -2,6 +2,47 @@
   #style.css
 \*-----------------------------------*/
 
+:root {
+  --text-yellow-color: #fbda68;
+  --text-black-color-bold: #121212;
+}
+
+.name span {
+  color: transparent;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-text-stroke: 1px var(--text-black-color-bold);
+}
+
+.name span::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--text-yellow-color);
+  height: 2rem;
+  overflow: hidden;
+  width: 0;
+  transition: 0.5s;
+  border-right: 4px solid var(--text-yellow-color);
+  -webkit-text-stroke: 1px var(--text-yellow-color);
+  animation: paintName 2.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes paintName {
+  0% {
+    width: 0%;
+    filter: drop-shadow(0 0 25px var(--text-yellow-color));
+  }
+  50% {
+    width: 95%;
+    filter: drop-shadow(0 0 25px var(--text-yellow-color));
+  }
+  100% {
+    width: 0%;
+    filter: drop-shadow(0 0 25px var(--text-yellow-color));
+  }
+}
+
 /**
  * copyright 2022 @codewithsadee
  */
@@ -2002,7 +2043,7 @@ textarea.form-input::-webkit-resizer {
 
   .info-content .name {
     white-space: nowrap;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .info-content .title {
